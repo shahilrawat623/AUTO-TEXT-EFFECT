@@ -7,6 +7,49 @@
 }
 
 body{
-    background-color: #19180A;
+    background-color: #0C0C0C;
     font-family: "Permanent Marker", cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #FFFFFF;
+}
+
+h1 span {
+   font-size: 3rem;
+   position: relative;
+}
+
+h1 ::after{
+    content: "";
+    background-color: #0C0C0C;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: inline;
+    width: 100%;
+    height: 90%;
+    border-left: 2px solid #FFFFFF;
+    animation: slide 5s ease-in-out infinite,
+    blink .8s linear infinite;
+}
+
+@keyframes slide {
+    0% ,100%{
+        left: 0;
+    }
+
+    25%,75%{
+        left: 100%;
+    }
+}
+
+@keyframes blink {
+    0% ,100%{
+        border-left-color:#0C0C0C ;
+    }
+    50%{
+        border-left-color: #FFFFFF;
+    }
 }
